@@ -1,6 +1,7 @@
-def todolist()
-    from tkinter import*
-    from stopwatch_final import *
+
+from tkinter import*
+from stopwatch_final import *
+def todolist():
     root=Tk()
     inp_list=[]
     n=int(input("Enter number of tasks to do today:"))
@@ -33,4 +34,5 @@ def todolist()
     lb=Button(root,text="Previous records",bg='purple',fg='white',command=records)
     lb.pack()
     root.mainloop()
+
 
