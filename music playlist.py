@@ -1,6 +1,6 @@
+from tkinter import *
+import webbrowser
 def music_playlist():
-  from tkinter import *
-  import webbrowser
   root=Tk()
   lb1=Label(root,text='Music Playlist')
   lb1.grid(row=0,column=0)
