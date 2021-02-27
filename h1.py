@@ -1,5 +1,5 @@
 from tkinter import*
-from stopwatch import *
+from stopwatch_final import *
 def todolist():
     
     inp_list=[]
@@ -23,14 +23,25 @@ def todolist():
             for o in m:
                 print(o,end='   ')
             print()
-    def records1():
-        f1=open("record1.txt",'a')
-        f1.write(t)
-        f1.close()
+    def c1():
+        for j in inp_list:
+            bu1=Checkbutton(root,text=j,command = stopwatch)
+            bu1.pack()
+            t=pass_s()
+            print(t)
+            f1=open("record1.txt",'a')
+            f1.write(t)
+            f1.close()
     def records2():
-        f2=open("record2.txt",'a')
-        f1.write(t)
-        f2.close()
+        for j in inp_list:
+            
+            bu1=Checkbutton(root,text=j,command = stopwatch)
+            bu1.pack()
+            t=pass_s()
+            print(t)
+            f2=open("record2.txt",'a')
+            f1.write()
+            f2.close()
 
         
 
@@ -39,14 +50,7 @@ def todolist():
     label2.pack()
     label3=Label(root,text="Select Day number")
     label2.pack()
-    ch1=Checkbutton(root,text='1',command = records1)
-    ch2=Checkbutton(root,text='2',command = records2)
-    for j in inp_list:
-        bu1=Checkbutton(root,text=j,command = stopwatch)
-        bu1.pack()
-    t=pass_s
-    print(t)
-    lb=Button(root,text="Previous records",bg='purple',fg='white',command=record)
-    lb.pack()
+    ch1=Checkbutton(root,text='1',command = c1)
+    ch2=Checkbutton(root,text='2',command = c2)
     root.mainloop()
 todolist()
