@@ -2,7 +2,7 @@
 from tkinter import*
 from stopwatch_final import *
 def todolist():
-    root=Tk()
+    
     inp_list=[]
     n=int(input("Enter number of tasks to do today:"))
     print("Enter your to do's")
@@ -25,7 +25,7 @@ def todolist():
             print()   
         
 
-
+    root=Tk()
     label2=Label(root,text="TO DO LIST",bg='black',fg='white')
     label2.pack()
     for j in inp_list:
