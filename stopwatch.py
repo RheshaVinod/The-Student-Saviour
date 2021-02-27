@@ -6,7 +6,7 @@ def stopwatch():
     def counter_label(label): 
             def count(): 
                     if running: 
-                            global counter 
+                            nonlocal counter 
 	
 			# To manage the intial delay. 
                             if counter==66600:			 
@@ -26,7 +26,7 @@ def stopwatch():
 	
 # start function of the stopwatch 
     def Start(label): 
-            global running 
+            nonlocal running 
             running=True
             counter_label(label) 
             start['state']='disabled'
@@ -35,7 +35,7 @@ def stopwatch():
 	
 # Stop function of the stopwatch 
     def Stop(): 
-            global running 
+            nonlocal running 
             start['state']='normal'
             stop['state']='disabled'
             reset['state']='normal'
@@ -43,7 +43,7 @@ def stopwatch():
 	
 # Reset function of the stopwatch 
     def Reset(label): 
-            global counter 
+            nonlocal counter 
             counter=66600
 	
 	# If rest is pressed after pressing stop. 
