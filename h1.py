@@ -1,5 +1,5 @@
 from tkinter import*
-from stopwatch_final import *
+from stopwatch import *
 def todolist():
     
     inp_list=[]
@@ -23,25 +23,30 @@ def todolist():
             for o in m:
                 print(o,end='   ')
             print()
+    def file2():
+          t=pass_s()
+            print(t)
+            f2=open("record2.txt",'a')
+            f1.write()
+            f2.close()
+    def file1():
+            t=pass_s()
+            print(t)
+            f2=open("record1.txt",'a')
+            f1.write()
+            f2.close()
+            
     def c1():
         for j in inp_list:
             bu1=Checkbutton(root,text=j,command = stopwatch)
             bu1.pack()
-            t=pass_s()
-            print(t)
-            f1=open("record1.txt",'a')
-            f1.write(t)
-            f1.close()
+            file1()
     def records2():
         for j in inp_list:
             
             bu1=Checkbutton(root,text=j,command = stopwatch)
             bu1.pack()
-            t=pass_s()
-            print(t)
-            f2=open("record2.txt",'a')
-            f1.write()
-            f2.close()
+            file2()
 
         
 
@@ -53,4 +58,6 @@ def todolist():
     ch1=Checkbutton(root,text='1',command = c1)
     ch2=Checkbutton(root,text='2',command = c2)
     root.mainloop()
+todolist()
+    
 todolist()
