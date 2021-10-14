@@ -33,7 +33,7 @@ def todolist():
     bt1 = Button(root, text = "Click Me!", command = myClick ,bg = "blue",fg = "white")#callback
     bt1.pack()
     
-    
+    print("to do list")
     root.mainloop()
     
 
